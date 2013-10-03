@@ -1,0 +1,72 @@
+
+
+
+In the following Ruby version string, what's the patch level?  ruby-1.9.3-p0
+.3
+p0		<
+1.9.3
+1.9
+
+
+What is the standard Ruby interpreter called?
+Rubinius
+JRuby
+MRI		<
+RISC
+
+
+What does MRI stand for?
+Mighty Ruby Instance
+Many Ruby Instance
+More Ruby Interactive
+Matz's Ruby Interpreter		<
+
+
+Who invented Ruby?
+Yukihiro Matsumoto
+James Gosling
+Ruby Billingsworth
+Edgar Codd
+
+
+What kind of programming language is Ruby?
+Markup
+Static
+Compiled
+Dynamic
+
+
+What is the process of figuring out the how the real world is represented in your object oriented program?
+Matrixing
+Domain modeling	<
+Object orienting
+Program making
+
+
+What character denotes an instance variable?
+!
+$
+#
+@		<
+
+
+Which of these statements outputs the statement "a is 2"? Assume the following code is set:  a = 2
+if a == 1 puts "a is 2" end
+if a != 2 puts "a is 2" end
+if a == 2 puts "a is 2" end		<
+if a =21 puts "a is 2" end
+
+
+What is the determining factor on where variables can be accessed?
+Line of Sight
+Scope		<
+Distance
+Blocks
+
+
+Which of these is not a type of variable?
+Instance
+Local
+Distance		<
+Global
+

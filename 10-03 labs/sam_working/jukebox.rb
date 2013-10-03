@@ -1,3 +1,5 @@
+require_relative './song_library.rb'
+
 def jukebox(command)
   if command.downcase == "list"
     list_library
@@ -12,7 +14,7 @@ def list_library
     puts list_artist(artist, album_hash)
   end
 end
- 
+
 def parse_command(command)
   parse_artist(command, full_library) || play_song(command, full_library) || not_found(command)
 end
@@ -44,6 +46,7 @@ def play_song(command, lib)
             if song.downcase == command.downcase
             puts "Now Playing: #{artist[command].strip}: #{album} - #{song}\n\n"
             return true
+            end
           end
         end
       end
@@ -66,5 +69,4 @@ end
 def not_found(command)
   puts "I did not understand '#{command}'!\n\n"
   true
-end
 end
