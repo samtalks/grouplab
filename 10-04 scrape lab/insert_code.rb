@@ -19,9 +19,9 @@ index = {
 
 db.execute( 
   "CREATE INSERT #{index_hash} (
-    #{key_int_primary} PRIMARY KEY, 
-    #{key_int} INTEGER,
-    #{key_text} TEXT);")
+    #{name} PRIMARY KEY, 
+    #{tag_line} TEXT
+  
 
 
 ###########  CREATE TABLE END
