@@ -29,6 +29,11 @@ db.execute(
 
 
 
+db.execute( 
+  "CREATE INSERT #{index_hash} (
+    #{key_int_primary} PRIMARY KEY, 
+    #{key_int} INTEGER,
+    #{key_text} TEXT);")
 
 # CREATE TABLE index (
 #   id INTEGER PRIMARY KEY,
