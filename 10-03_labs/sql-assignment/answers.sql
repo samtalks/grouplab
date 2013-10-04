@@ -1,0 +1,1 @@
+SELECT choice_text from choices where question = 1;
