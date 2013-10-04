@@ -2,9 +2,7 @@ require "sqlite3"
 
 db = SQLite3::Database.new( "flatiron_scrape.db" )
 
-
 ###########  CREATE TABLE START
-
 
 
 db.execute( 
@@ -19,7 +17,7 @@ db.execute(
 # index_hash.each do |key
 
 db.execute( 
-  "CREATE TABLE #{index_hash} (
+  "CREATE INSERT #{index_hash} (
     #{key_int_primary} PRIMARY KEY, 
     #{key_int} INTEGER,
     #{key_text} TEXT);")
