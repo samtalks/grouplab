@@ -3,7 +3,7 @@ require "sqlite3"
 db = SQLite3::Database.new( "flatiron_scrape.db" )
 
 ###########  CREATE TABLE START
-
+=begin
 
 db.execute( 
   "CREATE TABLE users (
@@ -23,9 +23,11 @@ db.execute(
     #{tag_line} TEXT
   
 
-
+=end
 ###########  CREATE TABLE END
 ###########  INSERT START
+=begin
+
 
 index_ = {
   
@@ -65,5 +67,5 @@ CREATE TABLE student_profile (
   coderwall TEXT,
 );
 
-
+=end
 ###########  INSERT END
