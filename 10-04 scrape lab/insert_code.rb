@@ -2,19 +2,33 @@ require "sqlite3"
 
 db = SQLite3::Database.new( "flatiron_scrape.db" )
 
+
+###########  CREATE TABLE START
+
+
+
 db.execute( 
   "CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     name TEXT);") 
 
-index_hash = {
-  : => 
-}
+# index_hash = {
+#   : => 
+# }
+
+# index_hash.each do |key
 
 db.execute( 
   "CREATE TABLE #{index_hash} (
-    id INTEGER PRIMARY KEY AUTOINCREMENT, 
-    name TEXT);")
+    #{key_int_primary} PRIMARY KEY, 
+    #{key_int} INTEGER,
+    #{key_text} TEXT);")
+
+
+###########  CREATE TABLE END
+###########  INSERT START
+
+
 
 
 # CREATE TABLE index (
@@ -24,3 +38,6 @@ db.execute(
 #   intro TEXT,
 #   photo_url TEXT
 # );git
+
+
+###########  INSERT END
