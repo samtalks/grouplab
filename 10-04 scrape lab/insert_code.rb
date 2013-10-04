@@ -53,18 +53,19 @@ db.execute(
 ###########  INSERT START
 
 
-index_hash = {
-  "name" => ["Sam", "Jeanne"],
-  "tagline" => ["I'm Sam", "I'm Jeanne"],
-  "blurb" => ["stuff about me I'm Sam", "I'm Jeanna and I like coding"],
-  "photo_url" => ["www.photo.com", "www.photo.com"]
-}
 
-index.each do |key, value|
-  index[key].each do |item|
+  name = ["Sam", "Jeanne"],
+  tagline = ["I'm Sam", "I'm Jeanne"],
+  blurb = ["stuff about me I'm Sam", "I'm Jeanna and I like coding"],
+  photo_url = ["www.photo.com", "www.photo.com"]
+
+# all_users = [
+# user1 = "Sam", "I'm Sam", "stuff about me I'm Sam", "www.photo.com"
+# ]
+38.times do |i|
     db.execute( 
-      "INSERT INTO index(name, tagline, blurb, photo_url) VALUES(#{item})"
-  end
+      "INSERT INTO index(name, tagline, blurb, photo_url) VALUES(#{name[i]}, #{tagline[i]})"
+      
 end
 
 # CREATE TABLE index (
@@ -92,7 +93,6 @@ end
 # db.execute( "SELECT...." ) do |row|
 #   p row
 # end
-
 
 
 ###########  INSERT END
