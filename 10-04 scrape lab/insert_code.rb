@@ -27,7 +27,8 @@ sql = <<SQL
     question_id INTEGER REFERENCES questions,
     choice_text TEXT, 
     correct TEXT
+  );
 SQL
 
-
+db.execute_batch( sql )
 # db.execute( "insert into table values ( ?, ? )", *bind_vars )
