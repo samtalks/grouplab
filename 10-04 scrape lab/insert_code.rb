@@ -10,9 +10,10 @@ db.execute(
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     name TEXT);") 
 
-# index_hash = {
-#   : => 
-# }
+index = {
+  :name => ["Jeanne", "Sam"]
+  :tag_line => ["I love Ruby", "Ruby noob"]
+}
 
 # index_hash.each do |key
 
