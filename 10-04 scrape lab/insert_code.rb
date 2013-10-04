@@ -1,34 +1,26 @@
 require "sqlite3"
-# require_relative "./schema.sql"
-
 
 db = SQLite3::Database.new( "flatiron_scrape.db" )
 
-
-sql = <<SQL
-  CREATE TABLE users (
+db.execute( 
+  "CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
-    name TEXT
-  ); 
+    name TEXT);") 
 
-  CREATE TABLE quizzes(
+index_hash = {
+  : => 
+}
+
+db.execute( 
+  "CREATE TABLE #{index_hash} (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
-    name TEXT
-  );
+    name TEXT);")
 
-  CREATE TABLE questions (
-    id INTEGER PRIMARY KEY AUTOINCREMENT, 
-    quiz_id INTEGER REFERENCES quizzes,
-    question_text TEXT
-  );
 
-  CREATE TABLE choices (
-    id INTEGER PRIMARY KEY AUTOINCREMENT, 
-    question_id INTEGER REFERENCES questions,
-    choice_text TEXT, 
-    correct TEXT
-  );
-SQL
-
-db.execute_batch( sql )
-# db.execute( "insert into table values ( ?, ? )", *bind_vars )
+# CREATE TABLE index (
+#   id INTEGER PRIMARY KEY,
+#   name TEXT,
+#   tagline TEXT,
+#   intro TEXT,
+#   photo_url TEXT
+# );git
